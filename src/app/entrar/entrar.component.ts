@@ -23,22 +23,27 @@ export class EntrarComponent implements OnInit {
   }
 
   entrar() {
-    this.authService.entrar(this.usuarioLogin).subscribe((resp: UsuarioLogin) => {
-      this.usuarioLogin = resp
+    this.authService.entrar(this.usuarioLogin).subscribe({
+      next: (resp: UsuarioLogin) => {
+        this.usuarioLogin = resp
 
-      environment.token = this.usuarioLogin.token
-      environment.nome = this.usuarioLogin.nome
-      environment.foto = this.usuarioLogin.foto
-      environment.id = this.usuarioLogin.id
+        environment.token = this.usuarioLogin.token
+        environment.nome = this.usuarioLogin.nome
+        environment.foto = this.usuarioLogin.foto
+        environment.id = this.usuarioLogin.id
 
+        console.log(environment.token);
+        console.log(environment.nome);
+        console.log(environment.foto);
+        console.log(environment.id);
 
-      this.router.navigate(["/inicio"])
-    }, erro => {
-      if (erro.status == 500) {
-        alert("Usuário ou senha inválidos!")
-      }
-    })
-
+        this.router.navigate(["/inicio"])
+        alert('Bem vindo(a)!')
+      }, error: erro => {
+        if (erro.status == 500 || erro.status == 401) {
+          alert('ERRO! Usuário ou senha inválidos!')
+        }
+      },
+    });
   }
-
 }
