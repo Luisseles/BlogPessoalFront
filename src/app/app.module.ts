@@ -20,6 +20,8 @@ import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component'
 
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +33,8 @@ import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component'
     TemaComponent,
     TemaEditComponent,
     TemaDeleteComponent,
+
+    
 
     
     

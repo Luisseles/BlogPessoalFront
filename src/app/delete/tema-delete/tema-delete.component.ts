@@ -17,7 +17,7 @@ export class TemaDeleteComponent implements OnInit {
   constructor(
     private temaService: TemaService,
     private router: Router,
-    private route: ActivatedRoute,
+    private route: ActivatedRoute
    
   ) { }
 

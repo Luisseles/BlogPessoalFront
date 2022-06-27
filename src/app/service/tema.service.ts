@@ -27,7 +27,7 @@ export class TemaService {
 
   getByIdTema(id: number): Observable<Tema>{
     this.refreshToken()
-    return this.http.get<Tema>(`http://localhost:8080/${id}`, this.token)
+    return this.http.get<Tema>(`http://localhost:8080/tema/${id}`, this.token)
   }
 
   postTema(tema: Tema): Observable<Tema> {
@@ -42,7 +42,7 @@ export class TemaService {
   putTema(tema: Tema): Observable<Tema> {
     this.refreshToken()
     return this.http.put<Tema>(
-      'http://localhost:8080/tema',
+      'http://localhost:8080/tema/atualizar',
       tema,
       this.token
     );
