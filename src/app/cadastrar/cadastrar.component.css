@@ -1,4 +1,4 @@
-#img-bg{
+#img-bg {
     background-image: url("https://i.imgur.com/CojdllQ.jpg");
     min-height: 695px;
     background-position: center;
@@ -6,3 +6,7 @@
     background-size: cover;
 }
 
+.container-fluid {
+    background-color: gainsboro;
+
+}

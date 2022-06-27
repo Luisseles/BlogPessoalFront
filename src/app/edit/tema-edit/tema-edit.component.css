@@ -1,0 +1,14 @@
+.container{
+    padding: 3rem;
+    font-family: "Baloo Da 2", serif;
+}
+
+h1{
+    font-size: 60pt;
+    color: azure;
+}
+
+label{
+    color: gold;
+}
+

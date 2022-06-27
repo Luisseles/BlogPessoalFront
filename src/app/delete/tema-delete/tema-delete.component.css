@@ -1,0 +1,17 @@
+.container {
+    padding: 3rem;
+}
+
+.fs-54 {
+    font-size: 60pt;
+    text-align: center;
+    color: azure;
+
+}
+
+h1,
+h5,
+h4 {
+    font-family: "Baloo Da 2", serif;
+    color: azure;
+}
